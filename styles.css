@@ -1,0 +1,211 @@
+body {
+    font-family: Georgia;
+    margin-top: 47px;
+    margin-left: 0%;
+    margin-right: 0%;
+    height: 1500px;
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px ;
+    align-items: top;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
+@keyframes slide-right{
+    from{
+      margin-left:-100%;
+    }
+    to{
+      margin-left:0;
+    }
+  }
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    animation: slide-right 1s ease-in-out;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0 15px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    float: left;
+    display: block;
+    
+}
+
+.navbar-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+   
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+.quote-container {
+    position: relative ;
+    width: 100%;
+    height: 95vh; /* Full height */
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazhwZHNydWZ6dWVzdXo4YXZzM3IyZ2ZtbmJka3pnN2IxYjAzcDJ3eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KFH29iIiBK9DlgmZEY/giphy.gif'); /* Hook your GIF link here */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    text-align: right;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn{
+    from{
+      opacity:0;
+    }
+    to{
+      opacity:1;
+    }
+  }
+
+.quote {
+    align-self: self-end;
+    font-size: 20px;
+    padding: 20px;
+    font-family: georgia;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: calc(100vh - 70px); /* Full height minus navbar height */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+    
+}
+
+.category {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    transition: transform 0.3s ease; /* Transition for the scaling effect */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0); /* Border around each category */
+    border-radius: 8px; /* Optional: add rounded corners */
+    font-style: italic;
+}
+
+.category1 {
+    background-image: url('https://kathryncampbell.com/wp-content/uploads/2020/03/non_fiction_featured.jpg?w=640'); /* Image for Category 1 */
+}
+
+.category2 {
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/86a59d128720801.615c4509f0d81.jpg'); /* Image for Category 2 */
+}
+
+.category3 {
+    background-image: url('https://images.vexels.com/content/313287/preview/children-in-the-summer-book-cover-design-40d5ee.png'); /* Image for Category 3 */
+}
+
+.category4 {
+    background-image: url('https://templatelab.com/wp-content/uploads/2024/02/Thesis-Cover-Page-Template-scaled.jpg'); /* Image for Category 4 */
+}
+
+.category:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+}
+
+.intro {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #eee;
+    border-radius: 10px;
+    
+}
+
+#about {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background:black;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(245, 232, 232, 0.2);
+    text-align: center;
+    
+}
+
+
+
+#about h2 {
+    font-size: 2.5em;
+    color:white;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.6;
+    font-family: georgia;
+}
+
+video{
+    border-radius: 50%;
+    overflow: hidden;
+}
